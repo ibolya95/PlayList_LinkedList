@@ -1,6 +1,7 @@
 package com.packagechallenge;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Album {
@@ -29,5 +30,17 @@ public class Album {
             }
         }
         return null;
+    }
+
+    public boolean addToPlayList(String title, LinkedList<Song> playList) {
+        Song checkedSong = findSong(title);
+        if(checkedSong != null) {
+            playList.add(checkedSong);
+            return true;
+        } else {
+            System.out.println("Song is not in the album.");
+            return false;
+        }
+
     }
 }
