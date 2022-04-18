@@ -38,7 +38,7 @@ public class Album {
             playList.add(checkedSong);
             return true;
         } else {
-            System.out.println("Song is not in the album.");
+            System.out.println("Song " + title + " is not in the album.");
             return false;
         }
 
