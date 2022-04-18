@@ -1,6 +1,7 @@
 package com.packagechallenge;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -24,6 +25,16 @@ public class Main {
 	    album.addSong("House of Mirrors", 3.41);
 
 	    albums.add(album);
+
+	    LinkedList<Song> playList = new LinkedList<>();
+	    albums.get(0).addToPlayList("In The Court Of The Dragon", playList);
+	    albums.get(0).addToPlayList("Like A Sword Over Damocles", playList);
+	    albums.get(0).addToPlayList("The Shadow Of The Abattoir", playList);
+	    albums.get(0).addToPlayList("Catastrophist", playList);
+	    albums.get(1).addToPlayList("Deceiver, Deceiver", playList);
+	    albums.get(1).addToPlayList("House of Mirrors", playList);
+	    albums.get(1).addToPlayList("Handshake with Hell", playList);
+	    albums.get(1).addToPlayList("The Eagle Flies Alone", playList);
 
     }
 }
